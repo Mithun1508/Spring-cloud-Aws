@@ -9,7 +9,19 @@ WARNING: These instructions allow you to run and test the application from withi
 
 ![Screenshot (99)](https://user-images.githubusercontent.com/93249038/215415905-9dbd6b36-bc89-4bcd-8ace-307c12fb3cb6.png)
 
+# Features    
 
+Spring Messaging API implementation for [SQS](http://aws.amazon.com/sqs/).
+
+Spring Cache API implementation for [ElastiCache](http://aws.amazon.com/elasticache/).
+
+Annotation-based mapping of [SNS](http://aws.amazon.com/sns/) endpoints (HTTP).
+
+Access the resources by their logical name defined in a [CloudFormation](http://aws.amazon.com/cloudformation/) stack.
+
+Automatic JDBC DataSource creation based on the logical name of an [RDS](http://aws.amazon.com/rds/) instance.
+
+Ant-style path matching ResourceLoader for [S3](http://aws.amazon.com/s3/) buckets.
 
 First, create a security group that will be used to allow ingress connections from outside AWS. Whithin the security group just created, create a new access rule with the following configuration:
 
@@ -175,7 +187,39 @@ S.NO    AWS Service	Spring Cloud AWS 2.x	Spring Cloud AWS 3.x
   
 # sns Overview 
 ![sns-overview](https://user-images.githubusercontent.com/93249038/215416774-ec2ff6ce-e4d2-4056-b5b2-7dbae1ff8394.png)
+ 
+# Run it on your own AWS environment
+If you want to start this application on your own AWS environment you just need to do the following steps:
 
+Choose Ireland as region
+Go to the CloudFormation console.
+Create a new stack
+Name the stack "AwsSampleStack".
+Choose "Upload a template to Amazon S3".
+Upload the AwsSampleStack.template file (located at the root of this project).
+When prompted for a parameter value rdsPassword just type a password of your choice with a min length of 8 characters.
+The stack needs a while to start (around 15 to 20 minutes). Once it is complete, you can copy the public DNS address of the created EC2 instance and open it in your browser with port 8080. For example http://ec2-54-72-102-202.eu-west-1.compute.amazonaws.com:8080.
+
+# Running the application locally
+Please note that you need a running stack on AWS to run it locally!
+
+If you want to play around with the application, you can start it locally on your machine. In order to start the application you have to create a configuration file that configures the necessary parameters to connect to the environment.
+
+Please create a new properties file (for example access.properties). This file must contain three properties named accessKey,secretKey and rdsPassword. These two properties accessKey and secretKey are account/user specific and should never be shared to anyone. To retrieve these settings you have to open your account inside the AWS console and retrieve them through the [Security Credentials Page] AWS-Security-Credentials.
+
+Note: In general we recommend that you use an [Amazon IAM] Amazon-IAM user instead of the account itself. The last password rdsPassword is used to access the database inside the integration tests. This password has a minimum length of 8 characters.
+
+An example file would look like this
+
+cloud.aws.credentials.accessKey=ilaugsjdlkahgsdlaksdhg
+cloud.aws.credentials.secretKey=aöksjdhöadjs,höalsdhjköalsdjhasd+
+cloud.aws.region.static=EU_WEST_1
+cloud.aws.stack.name=AwsSampleStack
+cloud.aws.rds.RdsInstance.password=someVerySecretPassword
+Once you created the properties file you can start the application using the following command:
+
+mvn spring-boot:run -Drun.arguments="--spring.config.location=/path/to/your/properties/file,--spring.profiles.active=local"
+Note: There are multiple ways to start a Spring Boot application, please refer to the [Spring Boot documentation] Run-Spring-Boot to see all the possibilities.
 # REFERENCES 
 
 1) https://docs.awspring.io/spring-cloud-aws/docs/3.0.0-M3/reference/html/index.html
