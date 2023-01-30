@@ -133,17 +133,32 @@ Go to your application by click to the link given at the output section of the c
 
 S.NO    AWS Service	Spring Cloud AWS 2.x	Spring Cloud AWS 3.x
   1       S3	                 ✅	                     ✅
+  
   2       SNS	                 ✅	                     ✅
+  
   3       SES	                 ✅	                     ✅
+  
   4      Parameter Store	 ✅	                     ✅
+  
   5      Secrets Manager	 ✅	                     ✅
+  
   6          SQS	         ✅	                     ✅
+  
   7          RDS	         ✅	                  TODO #322
+  
+
   8        EC2	                 ✅	                     ❌
+  
   9      ElastiCache	         ✅	                     ❌
+  
   10      CloudFormation	 ✅	                     ❌
+  
+  
   11       CloudWatch	         ✅	                     ✅
+  
+ 
   12       Cognito	         ✅	           Covered by Spring Boot
+  
   13        DynamoDB	         ❌	                      ✅
 
 
