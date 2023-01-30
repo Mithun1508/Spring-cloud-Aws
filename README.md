@@ -132,7 +132,9 @@ Insert your secret properties as explained in section AWS Secrets Manager
 As parameters to run your stack, you'll need to specify:
 Database password
 Key Name (for ssh)
-Go to your application by click to the link given at the output section of the cloudformation after the stack have been created.                                          
+Go to your application by click to the link given at the output section of the cloudformation after the stack have been created.                                           ![cloudformation-overview](https://user-images.githubusercontent.com/93249038/215416422-d78740a9-5d56-430d-8245-17b9ea48b15a.png)
+
+
 # Supported AWS integrations
 
 S.NO    AWS Service	Spring Cloud AWS 2.x	Spring Cloud AWS 3.x
@@ -165,6 +167,13 @@ S.NO    AWS Service	Spring Cloud AWS 2.x	Spring Cloud AWS 3.x
   
   13        DynamoDB	         ❌	                      ✅
 
+
+# Let's have a look at JDBC interceptor  
+ 
+  ![jdbc-retry-interceptor](https://user-images.githubusercontent.com/93249038/215416684-6810c52a-941e-41aa-a7c2-353bd7794f3d.png)
+  
+# sns Overview 
+![sns-overview](https://user-images.githubusercontent.com/93249038/215416774-ec2ff6ce-e4d2-4056-b5b2-7dbae1ff8394.png)
 
 # REFERENCES 
 
