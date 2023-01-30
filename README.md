@@ -128,4 +128,32 @@ Insert your secret properties as explained in section AWS Secrets Manager
 As parameters to run your stack, you'll need to specify:
 Database password
 Key Name (for ssh)
-Go to your application by click to the link given at the output section of the cloudformation after the stack have been created.
+Go to your application by click to the link given at the output section of the cloudformation after the stack have been created.                                          
+# Supported AWS integrations
+
+S.NO    AWS Service	Spring Cloud AWS 2.x	Spring Cloud AWS 3.x
+  1       S3	                 ✅	                     ✅
+  2       SNS	                 ✅	                     ✅
+  3       SES	                 ✅	                     ✅
+  4      Parameter Store	 ✅	                     ✅
+  5      Secrets Manager	 ✅	                     ✅
+  6          SQS	         ✅	                     ✅
+  7          RDS	         ✅	                  TODO #322
+  8        EC2	                 ✅	                     ❌
+  9      ElastiCache	         ✅	                     ❌
+  10      CloudFormation	 ✅	                     ❌
+  11       CloudWatch	         ✅	                     ✅
+  12       Cognito	         ✅	           Covered by Spring Boot
+  13        DynamoDB	         ❌	                      ✅
+
+
+# REFERENCES 
+
+1) https://docs.awspring.io/spring-cloud-aws/docs/3.0.0-M3/reference/html/index.html
+
+2) https://docs.awspring.io/spring-cloud-aws/docs/2.4.2/reference/html/index.html  
+
+3) https://docs.awspring.io/spring-cloud-aws/docs/2.3.5/reference/html/index.html
+
+4) https://docs.awspring.io/spring-cloud-aws/docs/3.0.0-M3/apidocs/index.html
+
