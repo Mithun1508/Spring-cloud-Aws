@@ -1,4 +1,7 @@
-The application allows users to create ads with a picture. Ads are stored in a RDS database in AWS. The project is configured to use MySQL, but that can be changed to use a different database (for instance, PostgreSQL). Pictures within ads are stored in a bucket in S3.
+               
+	![1__0mZHwZZ1PScyIhYZSj9Zw](https://user-images.githubusercontent.com/93249038/215418209-b543a772-3098-4062-a963-a9ba176c0e92.png)
+       
+	   The application allows users to create ads with a picture. Ads are stored in a RDS database in AWS. The project is configured to use MySQL, but that can be changed to use a different database (for instance, PostgreSQL). Pictures within ads are stored in a bucket in S3.
 
 Also the application has two different Spring profiles: dev and prod. While running prod, the application gets all properties(username, password, databasename...) to connect to a RDS database using AWS Secrets Manager for security purposes.
  
