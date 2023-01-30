@@ -1,10 +1,14 @@
 The application allows users to create ads with a picture. Ads are stored in a RDS database in AWS. The project is configured to use MySQL, but that can be changed to use a different database (for instance, PostgreSQL). Pictures within ads are stored in a bucket in S3.
 
 Also the application has two different Spring profiles: dev and prod. While running prod, the application gets all properties(username, password, databasename...) to connect to a RDS database using AWS Secrets Manager for security purposes.
-
+ 
+ 
 # Prerequisites
 Create an RDS Instance
 WARNING: These instructions allow you to run and test the application from within your development environment (i.e., without deploying it to AWS) using an RDS instance open to the world, which is something you should avoid in production.
+
+![Screenshot (99)](https://user-images.githubusercontent.com/93249038/215415905-9dbd6b36-bc89-4bcd-8ace-307c12fb3cb6.png)
+
 
 First, create a security group that will be used to allow ingress connections from outside AWS. Whithin the security group just created, create a new access rule with the following configuration:
 
