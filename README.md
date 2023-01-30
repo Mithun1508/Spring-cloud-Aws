@@ -184,5 +184,7 @@ S.NO    AWS Service	Spring Cloud AWS 2.x	Spring Cloud AWS 3.x
 
 3) https://docs.awspring.io/spring-cloud-aws/docs/2.3.5/reference/html/index.html
 
-4) https://docs.awspring.io/spring-cloud-aws/docs/3.0.0-M3/apidocs/index.html
+4) https://docs.awspring.io/spring-cloud-aws/docs/3.0.0-M3/apidocs/index.html    
+ 
+5) https://spring.io/projects/spring-cloud-aws
 
